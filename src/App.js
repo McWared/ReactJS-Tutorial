@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Greet from './components/Greet';
 import Welcome from './components/Welcome';
@@ -10,7 +9,7 @@ function App() {
     <div className="App">
       <Counter />
       <Greet name="Andrew">
-        <Welcome name="Andrew"/>
+        <Welcome name="Brus"/>
       </Greet>
       <Message />
     </div>

@@ -1,30 +1,21 @@
-import React, { Component } from "react";
-import { ComponentClass } from "react";
+import React from "react";
+import { useState } from "react";
 
-class Message extends Component {
+const Message = () => {
+    const [ state, setState] = useState("Hello visitor")
 
-    constructor () {
-        super()
-        this.state = {
-            message: "Hello visitor"
-        }
-    }
-
-    changeMessage () {
-        this.setState ({
-            message: "Thanks  for subscribing"
-        })
-
-    }
-
-    render() {
-        return(
-            <div>
-                <h1>{this.state.message}</h1>
-                <button onClick={() => this.changeMessage()}>Subscribe</button>
-            </div>
-        )
-    }
+    return (
+        <div>
+            <h3>{state}</h3>
+            <button onClick={(prev) => setState("Thanks for subscribing")}>
+                <h1>Subscribe</h1>
+            </button>
+            <button onClick={(prev) => setState("Hello visitor")}>
+                <h1>Toggle</h1>
+            </button>
+        </div>
+    )
 }
+
 
 export default Message

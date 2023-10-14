@@ -1,10 +1,9 @@
-import React, { Component } from "react";
-import { ComponentClass } from "react";
+import React from "react";
 
-class Welcome extends Component {
-    render() {
-        return <h1>You are welcome! It is a pleasure {this.props.name}</h1>
-    }
+const Welcome = (props) => {
+    return (
+        <h1>You are welcome! It is a pleasure {props.name}</h1>
+    )
 }
 
 export default Welcome
